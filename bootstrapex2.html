@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert with bootstrap</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $(".alert").hide();
+  $("#btn1").on("click",function(){
+    $(".alert").hide();
+    $(".alert-info").show();
+  });
+  $("#btn2").on("click",function(){
+    $(".alert").hide();
+    $(".alert-success").show();
+  });
+
+  $("#btn3").on("click",function(){
+    $(".alert").hide();
+    $(".alert-danger").show();
+  });
+});
+  </script>
+</head>
+<body>
+  <h1>Bootstrap example2</h1>
+  <hr>
+  <div class="alert alert-info m-3 col-md-3" role="alert">
+    this is info message
+  </div>
+  <div class="alert alert-success m-3 col-md-3" role="alert">
+    this is success message
+  </div>
+  <div class="alert alert-danger m-3 col-md-3" role="alert">
+    this is danger message
+  </div>
+  <input type="button" id="btn1" value="info" class="btn btn-success m-2">
+  <input type="button" id="btn2" value="success" class="btn border-warning">
+  <input type="button" id="btn3" value="danger" class="btn btn-danger">
+  
+</body>
+</html>

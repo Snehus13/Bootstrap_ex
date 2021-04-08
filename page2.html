@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>BootStrap Ex2</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery-3.6.0.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+
+                $(".alert").hide();
+
+                $("#btn1").on("click",function(){
+                    $(".alert").hide();
+                    $(".alert-success").show();
+                });
+
+                $("#btn2").on("click",function(){
+                    $(".alert").hide();
+                    $(".alert-warning").show();                    
+                });
+
+                $("#btn3").on("click",function(){
+                    $(".alert").hide();
+                    $(".alert-danger").show();                    
+                });                                
+            });
+        </script>
+
+    </head>
+    
+    <body>
+        <h1>BootStrap Alerts with Jquery</h1>
+        <hr>
+        <div class="alert alert-info m-3 col-md-3" role="alert"> 
+            This is Info Message
+        </div>
+
+        <div class="alert alert-success m-3 col-md-3" role="alert"> 
+            This is Success Message
+        </div>
+
+        <div class="alert alert-warning m-3 col-md-3" role="alert"> 
+            This is Warning Message
+        </div>
+        
+        <div class="alert alert-danger m-3 col-md-3" role="alert"> 
+            This is Delete Message
+        </div>        
+
+
+
+        <input type="button" id="btn1" value="success" class="btn btn-success m-2">
+        <input type="button" id="btn2" value="warning" class="btn border-warning">
+        <input type="button" id="btn3" value="danger" class="btn btn-danger">
+
+    </body>
+</html>
